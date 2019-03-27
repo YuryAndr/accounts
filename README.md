@@ -1,5 +1,6 @@
 # accounts
-### accounts-server - rmi сервер, реализающий интерфейс. В качестве БД - postgres
+### accounts-server 
+rmi сервер, реализающий интерфейс AccountService. В качестве БД - postgres
 1) Конфигурационные параметры в resources/application.yml
 2) Схема для Postgres - resources/schema.sql
 3) Мониторинг - в JMX Mbeans в домене ru.andryakov.accounts.common.service.AccountService
@@ -7,7 +8,8 @@
       - getAmount - метрики для получения amount
       - reset - операция для сброса
      
-### accounts-server
+### accounts-client-emulator 
+эмулятор клиентов
 1) Конфигурационные параметры в resources/application.yml
  - ``accounts.client.emulator.uri`` - подключение к серверу
  - ``accounts.client.emulator.numberOfThreadsAddAmount`` число потоков для добавления amount
