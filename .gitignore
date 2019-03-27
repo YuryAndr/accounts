@@ -1,0 +1,67 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+
+# RobotFramework
+*.pyc
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Mac
+.DS_Store
+
+# Maven
+
+target/
+*.orig
+Distrib/
+
+/source/.mvn
+
+**/*/dependency-reduced-pom.xml
+dependency-reduced-pom.xml
+
+**/node/
+**/node_modules/
+**/vuejs/etc/
+**/vuejs/test/unit/coverage/
+**/resources/public/
+**/logs/
+*.log
+
+*.gz
+*yarn.lock
+**/buildNumber.properties
+
+# aep-netflix-conuductor files
+*.lock
+*.bin
+
+# gradle files
+.gradle
+/build/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+# Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+gradle/wrapper/gradle-wrapper.properties
