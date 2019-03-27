@@ -13,9 +13,10 @@ public class RequestRunner {
 
     private final Request request;
     private final int numberOfThreads;
+    private ExecutorService executor;
 
     public RequestRunner(Request request, int numberOfThreads) {
-        Assert.isTrue(numberOfThreads > 0,
+        Assert.isTrue(numberOfThreads >= 0,
                 "numberOfThreads can not be negative");
         this.request = request;
         this.numberOfThreads = numberOfThreads;
@@ -23,9 +24,9 @@ public class RequestRunner {
 
     public void runRequest() {
         if (numberOfThreads == 0) {
-         return;
+            return;
         }
-        ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
+        executor = Executors.newFixedThreadPool(numberOfThreads);
         for (int i = 0; i < numberOfThreads; i++) {
             executor.execute(() -> {
                 while (true) {
